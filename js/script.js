@@ -1,5 +1,5 @@
 // Husk fra dag 1: skriv "use strict" herunder
-
+"use strict"
 
 // Nyt i dag: document.getElementById henter det HTML-element, der har den angivne id-attribut.
 // Husk fra HTML/CSS: en id-attribut er unik og identificerer ét bestemt element - det er præcis den værdi, vi bruger her.
@@ -10,6 +10,15 @@ const getImage = document.getElementById("imagePlaceholder");
 // Nyt i dag: addEventListener "lytter" efter en bestemt handling (her: klik på knappen).
 // Funktionen herinde bliver kørt, hver gang der klikkes på knappen.
 changeImgBtn.addEventListener("click", function() {
+    if(this.textContent === `Before`) {
+        getImage.src = `img/before.png`;
+        this.textContent = `After`
+    } else {
+        getImage.src = `img/after.png`
+        this.textContent = `Before`
+
+
+    }
 
     // Husk fra dag 1: skriv if/else-strukturen selv herunder.
     //
